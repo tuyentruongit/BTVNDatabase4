@@ -22,7 +22,7 @@ where salary > 60000 and job = 'Developer' or job = 'Engineer' ;
 -- Lấy ra danh sách các nghề nghiệp (job) duy nhất mà có ít nhất 3 người làm.
 select count(*),job  from Person group by job having count(*)>3;
 -- Lấy ra người nam (gender = ‘Male’) có lương (salary) cao nhất.
-select count(*),gender from Person group by gender ;
+select * from Person where gender ='Male' order by salary asc limit 1;
 -- Lấy ra người nữ (gender = ‘Female’) có lương (salary) thấp nhất.
 select * from Person where gender ='Female' order by salary asc limit 1;
 -- Lấy danh sách người (không trùng lặp) theo thứ tự tên đầy đủ tăng dần.
